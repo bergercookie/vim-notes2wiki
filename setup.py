@@ -2,7 +2,7 @@
 import os
 from setuptools import setup
 
-PKG_NAME = "mendeley2calibre"
+PKG_NAME = "vim-notes2wiki"
 
 author = "Nikos Koukis"
 author_email = "nickkouk@gmail.com"
@@ -16,7 +16,7 @@ def read(fname):
 
 setup(name=PKG_NAME,
       version='0.1.1',
-      description='Conversion tool for migrating a Mendeley DB to calibre',
+      description='Python script for vim-notes -> vimwiki conversion',
       long_description=read('README.md'),
       author=author,
       author_email=author_email,
@@ -24,15 +24,11 @@ setup(name=PKG_NAME,
       maintainer_email=author_email,
       license='BSD 3-clause',
       install_requires=(
-          "pymendeley",
-          "sh",
           "click",
-          "colorlog",
       ),
       url='https://github.org/bergercookie/{}'.format(PKG_NAME),
       download_url='https://github.org/bergercookie/{}'.format(PKG_NAME),
-      dependency_links=["https://github.com/bergercookie/pymendeley/tarball/master#egg=package-0.1.1", ],
-      scripts=['migrate_to_calibre.py', ],
+      scripts=['convert-notes.py', ],
       packages=[PKG_NAME, ],
       platforms="Linux",
       )
